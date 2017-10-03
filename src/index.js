@@ -9,6 +9,11 @@ let app = express();
 app.server = http.createServer(app);
 //Middlewares
 
+//parse application/json
+app.use(bodyParser.json({
+    limit : config.bodyLimit
+}));
+
 //passeport config
 
 //api routes v1
